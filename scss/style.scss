@@ -1,0 +1,479 @@
+@import "mixins";
+@import "~animate.css/animate.css";
+
+@include keyframes(bubble) {
+  0% { bottom: 0; }
+
+  50% {
+    background-color: rgba(255, 255, 255, 0.2);
+    bottom: 80px;
+  }
+
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+    bottom: 160px;
+  }
+}
+
+body, html {
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #808080;
+}
+
+.pusher {
+  margin-top: 50px;
+}
+
+#about-header {
+  .overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+
+    h1 {
+      color: #fff;
+      margin-top: 100px;
+    }
+  }
+  background: url("/static/okc_header.jpg") center / cover no-repeat;
+  height: 200px;
+}
+
+.contain {
+  background: #eee;
+  padding: 50px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  span {
+    font-size: 30px;
+  }
+  img {
+    float: left;
+    border-radius: 50%;
+    margin: 0 10px 10px 0;
+  }
+}
+
+#hero {
+  background: url("/static/hero.jpg") no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  height: 800px;
+
+  .see-more {
+    position: absolute;
+    bottom: 30px;
+    width: 200px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+
+    h2 {
+      color: #fff;
+    }
+
+    i {
+      color: #fff;
+      font-size: 40px;
+    }
+  }
+
+  #text-contain {
+    position: absolute;
+    width: 600px;
+    height: 350px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    h1 {
+      &:nth-child(1) {
+        font-size: 140px;
+        letter-spacing: -14px;
+      }
+      background: #fff;
+      color: #333;
+      font-size: 70px;
+      margin: 5px 0;
+      letter-spacing: -7px;
+      float: left;
+      clear: both;
+      padding-right: 10px;
+    }
+
+    h3 {
+      margin-top: 4px;
+      float: left;
+      clear: both;
+      background: #fff;
+      color: #333;
+    }
+
+    .sub {
+      position: absolute;
+      right: 0;
+      bottom: 22px;
+
+      h2 {
+        color: #fff;
+        letter-spacing: -3px;
+        line-height: 10px;
+        font-weight: lighter;
+        font-family: 'source code pro', sans-serif;
+      }
+    }
+  }
+}
+
+#about {
+  background: #eee url("/static/code.png") center / cover no-repeat;
+
+  .overlay {
+    background: rgba(255,255,255,0.9);
+    height: 100%;
+    width: 100%;
+    padding: 100px 0;
+
+    h3 {
+      margin-top: 100px;
+    }
+
+    div {
+      a.arrow {
+        color: #808080;
+      }
+    }
+
+    i {
+      font-size: 40px;
+    }
+  }
+}
+
+#projects {
+  .project {
+    padding: 80px 0;
+
+    &.stir {
+      img {
+        max-height: 243px;
+      }
+    }
+
+    h2 {
+      font-size: 35px;
+      margin-bottom: 0;
+      letter-spacing: -1px;
+    }
+    .link {
+      margin-bottom: 15px;
+      display: block;
+    }
+    .img-contain {
+      height: 300px;
+      width: 100%;
+      max-width: 500px;
+      position: relative;
+      .interactive {
+        position: absolute;
+        width: 386px;
+        height: 241px;
+        background: #fff url("/static/printstash2.gif") center top/cover no-repeat;
+        left: 57px;
+        top: 19px;
+        display: none;
+      }
+    }
+  }
+  .project:nth-child(even) {
+    background: #f2f2f2;
+  }
+}
+
+#experiments {
+  background-color: #eee;
+  padding: 100px 0;
+  position: relative;
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  h2 {
+    font-size: 35px;
+    z-index: 1;
+    position: relative;
+  }
+
+  .beaker {
+    position: absolute;
+    height: 680px;
+    width: 900px;
+    background: transparent url("/static/beaker.svg") center top/100% no-repeat;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+  }
+
+  #bubbles {
+    width: 300px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 140px;
+    position: absolute;
+    z-index: 0;
+
+    @for $i from 1 through 7 {
+      .bubble:nth-child(#{$i}) {
+        left: ($i*30) * 1px;
+        @include prefix(animation-delay, random() * 30ms);
+        @include prefix(animation-duration, (random(10) + 3) * 100ms);
+        @include prefix(transform, scale((random(13) + 3)/10));
+      }
+    }
+
+    .bubble {
+      animation-name: bubble;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      background-color: rgba(47, 237, 37, 0.7);
+      bottom: 0;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+      position: absolute;
+    }
+  }
+
+  .experiment {
+    background: #fff;
+    padding: 15px;
+
+    .chatio {
+      background: #fff url("/static/chatio.jpg") center top / cover no-repeat;
+      &:hover {
+        background: #fff url("/static/chat.gif") top left / cover no-repeat;
+      }
+    }
+    .meme {
+      background: #fff url("/static/memebuild.jpg") center top / cover no-repeat;
+      &:hover {
+        background: #fff url("/static/meme.gif") top left / cover no-repeat;
+      }
+    }
+    .rss {
+      background: #fff url("/static/rss.jpg") center top / cover no-repeat;
+      &:hover {
+        background: #fff url("/static/snug.gif") top left / cover no-repeat;
+      }
+    }
+
+    .chatio, .meme, .rss {
+      height: 175px;
+      position: relative;
+      margin: -15px;
+      margin-bottom: 10px;
+
+      &:hover {
+        div{
+          display: none;
+        }
+      }
+
+      div {
+        background: rgba(0,0,0,0.7);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+
+        h3 {
+          color: #fff;
+          text-align: right;
+          font-weight: bold;
+          font-size: 25px;
+          padding-right: 15px;
+          margin-top: 135px;
+        }
+      }
+    }
+  }
+}
+
+/**
+----------------
+Tech Section
+----------------
+**/
+#technology {
+  padding: 50px 0;
+
+  .logo {
+    height: 200px;
+  }
+  .logo img {
+    @include prefix(filter, grayscale(100%));
+  }
+  .logo img:hover {
+    @include prefix(filter, none);
+  }
+
+  .responsive-container {
+    position: relative;
+    width: 100%;
+  }
+  .dummy {
+    padding-top: 100%; /* forces 1:1 aspect ratio */
+  }
+  .img-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    text-align:center; /* Align center inline elements */
+    font: 0/0 a;
+
+    img {
+      vertical-align: middle;
+      display: inline-block;
+    }
+
+    &:before {
+      content: ' ';
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+    }
+  }
+}
+
+#contact {
+  background: #222;
+  padding: 50px 0;
+  h2 {
+    //color: #fff;
+  }
+  .social {
+    width: 165px;
+    margin: auto;
+    .box {
+      &:nth-child(1) {
+        margin-right: 25px;
+      }
+      float: left;
+
+      a {
+        i.fa {
+          color: #808080;
+          font-size: 80px;
+        }
+      }
+    }
+  }
+  .emailPhone {
+    width: 300px;
+    margin: auto;
+    //p {
+    //  //color: #fff;
+    //  font-size: 20px;
+    //}
+  }
+  .divider {
+    height: 1px;
+    width: 100%;
+    background: #eee;
+    float: left;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  #projects {
+    .project {
+      .img-contain {
+        .interactive {
+          width: 340px;
+          height: 213px;
+          left: 50px;
+          top: 17px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  #experiments {
+    .beaker{
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #experiments {
+    .beaker {
+      top: 0;
+      bottom: auto;
+      background-size: 400px;
+    }
+    .col-sm-4 {
+      margin-top: 20px;
+    }
+  }
+  #technology {
+    .img-container {
+      img {
+        max-width: 150px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  #hero {
+    overflow: hidden;
+    #text-contain {
+      position: relative;
+      width: 960px;
+      height: 375px;
+      .sub {
+        left: 311px;
+        bottom: 48px;
+      }
+    }
+  }
+  .project {
+    img {
+      width: 100%;
+    }
+  }
+  #contact {
+    .emailPhone {
+      width: 100%;
+    }
+  }
+  #experiments {
+    overflow: hidden;
+  }
+}
+
+@media (max-height: 675px) and (min-width: 640px) {
+  #hero {
+    #text-contain {
+      height: 600px;
+    }
+    .see-more {
+      display: none;
+    }
+  }
+}
