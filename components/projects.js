@@ -43,16 +43,16 @@ const projects = [
     engineering new interfaces for the user as well as jumping in
     where I needed to on the back-end.`
   },
-  {
-    id: 5,
-    alternate: true,
-    title: "Actovos",
-    img: "actovos",
-    website: "actovos.com",
-    link: "http://actovos.com",
-    labels: ["PHP", "JS", "React"],
-    description: `Actovos is web and mobile application that streamlines the process of connecting foster parents with children in need.`
-  }
+  // {
+  //   id: 5,
+  //   alternate: true,
+  //   title: "Actovos",
+  //   img: "actovos",
+  //   website: "actovos.com",
+  //   link: "http://actovos.com",
+  //   labels: ["PHP", "JS", "React"],
+  //   description: `Actovos is web and mobile application that streamlines the process of connecting foster parents with children in need.`
+  // }
 ];
 
 const Project = ({ project }) => (
