@@ -1,5 +1,5 @@
-import Head from "../components/head";
-import Nav from "../components/nav";
+import Head from '../components/head';
+import Nav from '../components/nav';
 
 const About = () => (
   <div>
@@ -19,8 +19,9 @@ const About = () => (
             <img src="/static/me.jpg" />
             <span>Hey I'm Jaden.</span>
             <br />
-            <br />I'm an Oklahoma native and have lived in Oklahoma my whole
-            life. My professional career spans 5+ years while my interest in Web
+            <br />
+            I'm an Oklahoma native and have lived in Oklahoma my whole life. My
+            professional career spans 8+ years while my interest in Web
             Development started long before that. Since writing my first webpage
             in notepad while in the 4th grade, I knew exactly what I wanted to
             do. I started picking up freelance clients while in high school
@@ -32,9 +33,9 @@ const About = () => (
             After a successful 3 years, I felt the need to pursue my career
             further with a move to start a role with one of the largest
             internationally known non-profits. I then continued to pursue my
-            career with a gaming company based in Atlanta, GA and now presently
-            working for a large non-profit organization funded by one of the
-            most well known retail store chains in the USA.{" "}
+            career with a gaming company based in Atlanta, GA and then working
+            for a large non-profit organization funded by one of the most well
+            known retail store chains in the USA.{' '}
           </p>
 
           <p>
