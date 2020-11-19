@@ -1,10 +1,5 @@
-import Head from '../components/head';
-import Nav from '../components/nav';
-
 const About = () => (
   <div>
-    <Head />
-    <Nav />
     <div className="pusher">
       <div id="about-header">
         <div className="overlay">
@@ -16,7 +11,7 @@ const About = () => (
       <div className="container">
         <div className="col-md-8 col-md-offset-2 contain">
           <p>
-            <img src="/static/me.jpg" />
+            <img src="/me.jpg" />
             <span>Hey I'm Jaden.</span>
             <br />
             <br />

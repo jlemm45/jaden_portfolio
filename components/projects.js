@@ -60,7 +60,7 @@ const Project = ({ project }) => (
           project.alternate ? 'col-lg-push-6' : ''
         } col-md-6 text-center`}
       >
-        <img style={{ maxHeight: 300 }} src={`/static/${project.img}.png`} />
+        <img style={{ maxHeight: 300 }} src={`/${project.img}.png`} />
       </div>
       <div className={`${project.alternate ? 'col-lg-pull-6' : ''} col-md-6`}>
         <h2>{project.title}</h2>

@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const About = () => (
   <section id="about">
     <div className="overlay">
@@ -16,7 +18,7 @@ const About = () => (
             in the latest technology to keep my skills at their finest.
           </p>
           <p>
-            Want the full story? Well go <a href="/about">here</a>.
+            Want the full story? Well go <Link href="/about">here</Link>.
           </p>
 
           <div className="text-center">

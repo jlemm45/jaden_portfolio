@@ -38,7 +38,7 @@ html {
       margin-top: 100px;
     }
   }
-  background: url('/static/okc_header.jpg') center / cover no-repeat;
+  background: url('/okc_header.jpg') center / cover no-repeat;
   height: 200px;
 }
 
@@ -58,7 +58,7 @@ html {
 }
 
 #hero {
-  background: url('/static/la_2019.jpg') no-repeat center center fixed;
+  background: url('/la_2019.jpg') no-repeat center center fixed;
   background-size: cover;
   width: 100%;
   position: relative;
@@ -134,7 +134,7 @@ html {
 }
 
 #about {
-  background: #eee url('/static/code.png') center / cover no-repeat;
+  background: #eee url('/code.png') center / cover no-repeat;
 
   .overlay {
     background: rgba(255, 255, 255, 0.9);
@@ -186,8 +186,7 @@ html {
         position: absolute;
         width: 386px;
         height: 241px;
-        background: #fff url('/static/printstash2.gif') center top/cover
-          no-repeat;
+        background: #fff url('/printstash2.gif') center top/cover no-repeat;
         left: 57px;
         top: 19px;
         display: none;
@@ -218,7 +217,7 @@ html {
     position: absolute;
     height: 680px;
     width: 900px;
-    background: transparent url('/static/beaker.svg') center top/100% no-repeat;
+    background: transparent url('/beaker.svg') center top/100% no-repeat;
     left: 0;
     right: 0;
     bottom: 0;
@@ -262,21 +261,21 @@ html {
     padding: 15px;
 
     .chatio {
-      background: #fff url('/static/chatio.jpg') center top / cover no-repeat;
+      background: #fff url('/chatio.jpg') center top / cover no-repeat;
       &:hover {
-        background: #fff url('/static/chat.gif') top left / cover no-repeat;
+        background: #fff url('/chat.gif') top left / cover no-repeat;
       }
     }
     .meme {
-      background: #fff url('/static/memebuild.jpg') center top / cover no-repeat;
+      background: #fff url('/memebuild.jpg') center top / cover no-repeat;
       &:hover {
-        background: #fff url('/static/meme.gif') top left / cover no-repeat;
+        background: #fff url('/meme.gif') top left / cover no-repeat;
       }
     }
     .rss {
-      background: #fff url('/static/rss.jpg') center top / cover no-repeat;
+      background: #fff url('/rss.jpg') center top / cover no-repeat;
       &:hover {
-        background: #fff url('/static/snug.gif') top left / cover no-repeat;
+        background: #fff url('/snug.gif') top left / cover no-repeat;
       }
     }
 
