@@ -1,37 +1,37 @@
-import React from "react";
-import Typed from "typed.js";
+import React from 'react';
+import Typed from 'typed.js';
 class Hero extends React.Component {
   state = {
-    showEnd: false
+    showEnd: false,
   };
 
   componentDidMount() {
     new Typed(this.helloRef, {
-      strings: ["Hello"],
+      strings: ['Hello'],
       typeSpeed: 50,
       startDelay: 10,
-      showCursor: false
+      showCursor: false,
     });
 
     new Typed(this.meetRef, {
-      strings: ["Nice to Meet You"],
+      strings: ['Nice to Meet You'],
       typeSpeed: 50,
       startDelay: 700,
-      showCursor: false
+      showCursor: false,
     });
 
     new Typed(this.textRef, {
       strings: [
-        "I like cycling",
-        "I fly drones",
-        "I like fun things",
-        "I like running",
-        "I build cool things",
-        ""
+        'I like cycling',
+        'I fly drones',
+        'I like fun things',
+        'I like running',
+        'I build cool things',
+        '',
       ],
       typeSpeed: 50,
       startDelay: 4000,
-      showCursor: false
+      showCursor: false,
     });
 
     new Typed(this.jadenRef, {
@@ -41,7 +41,7 @@ class Hero extends React.Component {
       showCursor: false,
       onComplete: () => {
         this.setState({ showEnd: true });
-      }
+      },
     });
   }
 
@@ -58,12 +58,12 @@ class Hero extends React.Component {
           <h1 className="jaden">
             <span ref={ref => (this.jadenRef = ref)} />
           </h1>
-          {this.state.showEnd &&
+          {this.state.showEnd && (
             <div className="sub animated fadeIn">
               <h2>Full Stack Developer</h2>
               <h2>in OKC</h2>
             </div>
-          }
+          )}
           <h3 className="text">
             <span ref={ref => (this.textRef = ref)} />
           </h3>

@@ -1,8 +1,8 @@
-(function () {
+(function() {
   console.warn(
-    'Hey! Want to see the src? Check out github https://github.com/jadenlemmon/jadenlemmon.com'
+    'Hey! Want to see the src? Check out github https://github.com/jadenlemmon/jadenlemmon.com',
   );
-  $(window).on('load resize', function () {
+  $(window).on('load resize', function() {
     $('#hero').height(window.innerHeight);
 
     var $el = $('#text-contain');
@@ -12,7 +12,7 @@
 
       var scale = Math.min(
         window.innerWidth / elWidth,
-        window.innerHeight / elHeight
+        window.innerHeight / elHeight,
       );
 
       scale = scale > 1 ? 1 : scale;
@@ -32,7 +32,7 @@
     }
   });
 
-  $(document).on('click', 'a[href]', function (event) {
+  $(document).on('click', 'a[href]', function(event) {
     if (
       location.pathname.replace(/^\//, '') ==
         this.pathname.replace(/^\//, '') &&
@@ -45,7 +45,7 @@
           {
             scrollTop: target.offset().top,
           },
-          1000
+          1000,
         );
         return false;
       }

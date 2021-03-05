@@ -16,6 +16,10 @@
     "build": "next build",
     "export": "next export",
     "start": "next start",
-    "dev": "next"
+    "dev": "next",
+    "prettier": "prettier --check '**/*.{js,json,css,md}'"
+  },
+  "devDependencies": {
+    "@actovos-consulting-group/prettier-config": "^1.0.2"
   }
 }

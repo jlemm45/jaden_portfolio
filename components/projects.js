@@ -87,7 +87,7 @@ const Project = ({ project }) => (
 
 const Projects = () => (
   <section id="projects">
-    {projects.map((project) => (
+    {projects.map(project => (
       <Project project={project} key={project.id} />
     ))}
   </section>

@@ -1,0 +1,6 @@
+.next
+.serverless
+.serverless_nextjs
+node_modules
+out
+.vscode
