@@ -5,7 +5,8 @@ const projects = [
     title: 'Voyage',
     img: 'voyage',
     website: 'voyageapp.io',
-    link: 'https://voyageapp.io',
+    link:
+      'https://voyageapp.io?utm_source=jaden_portfolio&utm_medium=website&utm_campaign=general',
     labels: ['Node', 'JS', 'React', 'Docker'],
     description: `Voyage lets you build isolated environments in minutes and makes it easy to share your work with anyone, so you can spend more time coding.`,
   },
@@ -14,7 +15,8 @@ const projects = [
     title: 'Actovos',
     img: 'actovos',
     website: 'actovos.com',
-    link: 'http://actovos.com',
+    link:
+      'http://actovos.com?utm_source=jaden_portfolio&utm_medium=website&utm_campaign=general',
     labels: ['PHP', 'JS', 'React'],
     description: `Actovos is web and mobile application that streamlines the process of connecting foster parents with children in need.`,
   },
@@ -24,7 +26,8 @@ const projects = [
     title: 'Oyster Dating',
     img: 'oyster',
     website: 'oysterapp.io',
-    link: 'http://oysterapp.io',
+    link:
+      'http://oysterapp.io?utm_source=jaden_portfolio&utm_medium=website&utm_campaign=general',
     labels: ['PHP', 'React', 'JS'],
     description: `Oyster is a location based dating application written in React Native. 
     Users are able to see other users in real-time at real locations. I was the lead developer on this project 
